@@ -19,26 +19,24 @@
 - Запустить make
 5. **Протокол**:
 ```
-~/Desktop/temp $ ls
-Makefile  hello.c
-~/Desktop/temp $ cat hello.c
+~/Desktop/lab8/temp $ make
+gcc --std=c99 --pedantic -o hello hello.c
+./hello
+Hello, Charles!
+rm hello.exe
+~/Desktop/lab8/temp $ cat Makefile
+all:
+        gcc --std=c99 --pedantic -o hello hello.c
+        ./hello
+        rm hello.exe
+~/Desktop/lab8/temp $ cat hello.c
 #include <stdio.h>
 
 int main() {
     printf("Hello, Charles!\n");
     return 0;
 }
-~/Desktop/temp $ cat Makefile
-all:
-    gcc ./hello.c -o hello.out
-    ./hello.out
-    rm hello.out
-~/Desktop/temp $ make
-gcc ./hello.c -o hello.out
-./hello.out
-Hello, Charles!
-rm hello.out
-~/Desktop/temp $
+~/Desktop/lab8/temp $
 ```
 6. **Выводы**: Эта работа была важной, так как я установил и скомпилировал программу на Си, и это поможет мне в выполнении будущих задач и работ на языке Си. Я также смог создать Makefile, который упрощает запуск программы.
 7. **Итог**: Я научился пользоваться компилятором gcc, make, а также создавать Makefile.
